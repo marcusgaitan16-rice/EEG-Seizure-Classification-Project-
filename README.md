@@ -23,13 +23,13 @@ Dataset: UCI Epileptic Seizure Recognition Dataset
 Contains:
 
 * 11,500 EEG recordings
-* 178 features per sample
+* 178 time points per sample
 * 5 original classes
 * EEG activity collected from multiple subjects
 
 ----------------------------------------
 
-Class descriptions:
+Class Descriptions
 
 1 - Seizure activity
 
@@ -78,6 +78,23 @@ Computational Neuroscience Interpretation
 
 ----------------------------------------
 
+Requirements
+
+Package/Purpose
+
+
+numpy - Numerical computations and arrays
+
+pandas - Data loading and manipulation
+
+matplotlib - Plotting EEG waveforms and scatter plots
+
+scipy - Signal processing and FFT analysis
+
+scikit-learn - RandomForestClassifier and Model Evaluation
+
+----------------------------------------
+
 Visualizations
 
 EEG Waveforms
@@ -118,3 +135,9 @@ Eyes Open (non-seizure)
   Range : 2.78 Hz — 25.03 Hz
   Mean  : 7.79 Hz
 ---------------------------------------------
+
+----------------------------------------
+
+Current Status
+
+* In Progress
