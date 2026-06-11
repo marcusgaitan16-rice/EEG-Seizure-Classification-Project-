@@ -97,7 +97,7 @@ pandas - Data loading and manipulation
 
 matplotlib - Plotting EEG waveforms and scatter plots
 
-scipy - Signal processing and FFT analysis
+scipy - Signal processing and Feature analysis
 
 scikit-learn - RandomForestClassifier and Model Evaluation
 
