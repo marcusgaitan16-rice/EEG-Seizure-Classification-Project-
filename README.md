@@ -76,6 +76,14 @@ Computational Neuroscience Interpretation
 * Neural signal characterization
 * Brain-state classification
 
+Professional Application
+
+* Working with real-world EEG data
+* Interpreting noisy biological signals
+* Feature extraction from neural recordings
+* Building machine learning workflows
+* Communicating technical findings through visualizations
+
 ----------------------------------------
 
 Requirements
@@ -136,8 +144,41 @@ Eyes Open (non-seizure)
   Mean  : 7.79 Hz
 ---------------------------------------------
 
+Frequency Analysis Shows
+
+* Seizure signals tend to have different frequency characteristics
+* Certain classes overlap
+* Frequency information contains signal
+
 ----------------------------------------
 
+Confusion Matrix and Classification Report
+
+Class
+
+Seizure - 96%
+
+Tumor Region - 56%
+
+Healthy Region - 56%
+
+Eyes Closed - 75%
+
+Eyes Open - 67%
+
+* Random Forest achieved 70.17% overall accuracy across five EEG classes.
+* Seizure activity was identified with 96% recall, indicating strong separability from non-seizure states.
+* Classes 2 and 3 exhibited substantial overlap, resulting in frequent misclassification.
+* Eyes Open and Eyes Closed recordings also showed moderate overlap.
+* These findings suggest seizure activity possesses distinctive EEG characteristics that can be effectively captured by machine learning models.
+
+----------------------------------------
 Current Status
 
 * In Progress
+
+* Still need to add hyperparamters and then rerun confusion matrix
+* Add Features - Avg Amplitude, Variance, RMS Amplitude, Dominant Frequency
+* Make a feature importance plot
+* Stack features to ML
+* 
