@@ -333,24 +333,28 @@ Standard train/test splitting does not prevent data leakage between recordings f
 
 ## Data Science
 
-* Data cleaning
-* Exploratory Data Analysis (EDA)
-* Feature engineering
-* Statistical analysis
-* Data visualization
-* EEG waveform interpretation
-* Amplitude analysis
-* Frequency-domain analysis
-* Dominant frequency extraction
-* Time-series visualization
+Data cleaning, validation, and integrity checking
+Exploratory data analysis on clinical signal data
+Statistical analysis with cross-validated significance testing
+Multi-class imbalance assessment
+
+## Signal Processing
+
+
+EEG waveform visualization and interpretation
+Butterworth bandpass filter design and validation
+Welch Power Spectral Density estimation
+FFT-based frequency band power extraction
+Time-domain and frequency-domain feature engineering
 
 ## Machine Learning
 
-* Train/test splitting
-* Feature scaling
-* Random Forest Classification
-* Model evaluation
-* Confusion matrix analysis
+Random Forest classification with constrained hyperparameters
+5-model feature engineering progression study
+Overfitting detection and mitigation
+5-fold stratified cross-validation
+Confusion matrix and per-class performance analysis
+Feature importance with statistical significance (±1 std dev)
 
 ## Computational Neuroscience Interpretation
 
@@ -366,6 +370,8 @@ Standard train/test splitting does not prevent data leakage between recordings f
 * Feature extraction from neural recordings
 * Building machine learning workflows
 * Communicating technical findings through visualizations
+
+
 
 ----------------------------------------
 # Requirements
