@@ -276,6 +276,9 @@ Dominant Frequency ranges by class represent clear highlights and struggles when
 
 Seizure signals tend to have different frequency characteristics compared to the Non-Seizure classifications and this is shown through the 98% recall from the ML with classifying seizures. Furthermore, in accordance with theta dominant bands shown in the plotted FFT data, the mean dominant frequency for seizures are 6.01 Hz which further solidifies seizure theta dominant activity.
 
+The 2D model shows significant overlap over many of the classes in terms of dominant frequency.
+The 3D models also shows overlap, however while also displaying the power disparity between seizure and non seizure classifications which further demonstrate hyperactivity in seizure EEG recordings.
+
 
 
 
