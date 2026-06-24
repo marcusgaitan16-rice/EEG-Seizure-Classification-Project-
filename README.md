@@ -20,10 +20,10 @@ Manual EEG review by trained neurologists is time-intensive and subject to inter
 ----------------------------------------
 # Key Findings
 
-* Seizure activity acheived 98% recall, demonstrating strong seperability of ictal recordings from all non-seizure states
-* FFT band power features alone acheived 74.0% test accuracy which outperformed both raw EEG time points (57.8%) and various amplitude features (60.9%)
-* All 9 combined features achieved 76.3% test accuracy with an 9.0% generalization gap, confirming amplitude and frequency features are complimentary
-* Adding raw EEG to FFT features reduced test accuracy from 74.0% to 73.5% while also having a higher generalization gap (11.7%) suggesting potential noise that hurts overall performance
+* Seizure activity achieved 98% recall, demonstrating strong separability of ictal recordings from all non-seizure states
+* FFT band power features alone achieved 73.96% test accuracy which outperformed both raw EEG time points (57.8%) and various amplitude features (60.9%)
+* All 9 combined features achieved 76.3% test accuracy with an 7.96% generalization gap, confirming amplitude and frequency features are complimentary
+* Adding raw EEG to FFT features reduced test accuracy from 73.96% to 73.5% while also having a higher generalization gap (11.7%) suggesting potential noise that hurts overall performance
 * Seizure recordings showed broadband power elevation across all 5 frequency bands which is consistent with the neural hyperactivation characteristic of ictal activity
 * Tumor and Healthy area recordings showed less than 2% band power distribution difference, explaining the primary classification challenge between 2 and 3
 
@@ -140,7 +140,7 @@ Non-Seizure (Eyes Open)
 * Theta - 19.7%
 * Alpha - 19.3%
 * Beta - 6.0%
-* Gamma - 0.7%%
+* Gamma - 0.7% 
 
 ________________________
 
@@ -274,7 +274,9 @@ Eyes Open (non-seizure)
 Dominant Frequency ranges by class represent clear highlights and struggles when analyzing the performance of the ML through the confusion matrix. Non-Seizure Tumor Area and Healthy Area had the most mistakes when classifying those two specifically due to similar data and features. When looking at Dominant Freq. Range Tumor/Healthy area are almost identical especially with the same mean frequency. 
 * Dominant Freq. Range, Mean Freq. and FFT Data all show similarity in data and thus overlap when classyfing Tumor/Healthy
 
-Seizure signals tend to have different frequency characteristics compared to the Non-Seizure classifications and this is shown through the 98% recall from the ML with classifying seizures.
+Seizure signals tend to have different frequency characteristics compared to the Non-Seizure classifications and this is shown through the 98% recall from the ML with classifying seizures. Furthermore, in accordance with theta dominant bands shown in the plotted FFT data, the mean dominant frequency for seizures are 6.01 Hz which further solidifies seizure theta dominant activity.
+
+
 
 
 ## Bandpass Filter
@@ -297,7 +299,7 @@ Seizure signals tend to have different frequency characteristics compared to the
 ----------------------------------------
 # Limitations
 
-## Class 2 / Class 3 Seperability
+## Class 2 / Class 3 Separability
 
 Tumor area and healthy area recordings exhibited near-identical relative band power distributions with less than 2% difference across all frequency bands. The primary discriminator between these classes is the absolute signal magnitude rather than frequency composition which shows a distinction that is difficult to capture reliably at 1 second recording resolution across multiple patients with different baseline amplitudes. 
 
@@ -339,7 +341,6 @@ Statistical analysis with cross-validated significance testing
 Multi-class imbalance assessment
 
 ## Signal Processing
-
 
 EEG waveform visualization and interpretation
 Butterworth bandpass filter design and validation
@@ -385,4 +386,22 @@ Package/Purpose
 * seaborn - Confusion matrix heatmap
 
 ----------------------------------------
+# How to Run
 
+This project was developed and run in **Google Colab**.
+
+## 1. Download the dataset
+Download `Epileptic Seizure Recognition.csv` from Kaggle:
+[UCI Epileptic Seizure Recognition Dataset](https://www.kaggle.com/datasets/harunshimanto/epileptic-seizure-recognition)
+
+## 2. Open the notebook in Google Colab
+- Go to [Google Colab](https://colab.research.google.com)
+- Select **File -> Upload notebook** and upload `EEG_Analysis_Notebook.ipynb` 
+
+## 3. Upload the dataset
+Each time you connect to a new Colab runtime, upload the CSV:
+from google.colab import files
+* Select `Epileptic Seizure Recognition.csv` when prompted.
+
+## 4. Run all cells
+Runtime -> Run all
